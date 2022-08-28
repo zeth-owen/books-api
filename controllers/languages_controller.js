@@ -4,6 +4,7 @@ const Language = require('../models/language.js')
 
 module.exports = languages
 
+// Seed:
 languages.get('/seed', (req, res) => {
     Language.insertMany([
         {
