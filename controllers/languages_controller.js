@@ -5,7 +5,7 @@ const Language = require('../models/language.js')
 module.exports = languages
 
 languages.get('/seed', (req, res) => {
-    Language.insertMany([[
+    Language.insertMany([
         {
             "name": "english",
             "greeting": "Hello world",
@@ -33,7 +33,7 @@ languages.get('/seed', (req, res) => {
             "greeting": "Salamu, dunia"
         }
     ]
-    ])
+    )
         .then(createdLanguages => {
             res.json({
                 message: "Seed successful!"
